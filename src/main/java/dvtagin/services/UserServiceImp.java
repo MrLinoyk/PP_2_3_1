@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserServiceImp implements UserService{
 
     private UserDao userDao;
@@ -36,6 +35,7 @@ public class UserServiceImp implements UserService{
     }
 
     @Override
+    @Transactional
     public void removeUser(int id) {
         userDao.removeUser(id);
     }
