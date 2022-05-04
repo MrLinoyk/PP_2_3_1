@@ -30,6 +30,7 @@ public class UserServiceImp implements UserService{
     }
 
     @Override
+    @Transactional
     public void addUser(User user) {
         userDao.addUser(user);
     }
@@ -41,6 +42,7 @@ public class UserServiceImp implements UserService{
     }
 
     @Override
+    @Transactional
     public void updateUser(int id, User user) {
         userDao.updateUser(id, user);
     }
